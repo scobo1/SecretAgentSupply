@@ -12,11 +12,13 @@ html {
 
 header {
   background-color: black;
+}
+
+header .container {
   color: white;
   font-size: 1rem;
   display: flex;
   align-items: center;
-  width: 960px;
 }
 
 header img {
@@ -49,12 +51,11 @@ header img {
    color: white;
    width: 20rem;
    font-weight: bold;
+   padding: 2rem 3rem
  }
 
  h3 {
    font-size: 1rem;
-   padding-top: 2rem;
-   margin-right: 3rem
  }
 
  h1 {
@@ -64,13 +65,24 @@ header img {
 
  /* Menu Nav */
 
- nav {
-   background-color: firebrick;
-   color: white;
+.navigation {
+  background-color: firebrick;
+}
+
+ nav .full-screen {
    display: flex;
    justify-content: space-between;
-   padding: 0.75rem 0rem;
  }
+
+ nav .mobile {
+   display: none;
+   font-size: 0.9rem;
+ }
+
+.navigation span {
+  color: white;
+  padding: 0.75rem 0rem;
+}
 
  /* Main Content */
  .products {
@@ -93,17 +105,24 @@ header img {
   margin: 2rem auto;
 }
 
+#glasses img {
+  height: 5rem;
+  margin: 4rem auto;
+}
+
 .description {
   background-color: black;
   color: white;
   padding: 0.5rem 0rem;
   text-align: center;
+  justify-content:
 }
 
 .information {
   display: flex;
   flex-direction: row;
-  margin: 3rem 0rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   justify-content: space-between;
 }
 
@@ -111,7 +130,6 @@ header img {
   width: 33%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
 }
 
 .info {
@@ -127,4 +145,65 @@ footer {
   height: 5rem;
   background-color: black;
   color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  #glasses {
+    display: none;
+  }
+  nav .full-screen {
+    display: none;
+  }
+  nav .mobile {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+  }
+  .product {
+    width: 47%;
+    flex-shrink: 1;
+  }
+  .info-block {
+    width: 35%;
+    flex-shrink: 1;
+  }
+  header .container {
+    font-size: 0.9rem;
+  }
+  header img {
+    height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  #watch #glasses {
+    display: none;
+  }
+  nav .full-screen {
+    display: none;
+  }
+  nav .mobile {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+  }
+  .product {
+    width: 90%;
+    flex-shrink: 1;
+    align-content: space-around;
+  }
+  .information {
+    flex-wrap: wrap;
+  }
+  .info-block {
+    width: 90%;
+    flex-shrink: 1;
+    margin-top: 0.5rem;
+  }
+  header .container {
+    font-size: 0.9rem;
+  }
+  header img {
+    height: 1.25rem;
+  }
 }
