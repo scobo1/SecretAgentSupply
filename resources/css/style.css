@@ -145,6 +145,8 @@ footer {
   height: 5rem;
   background-color: black;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -176,7 +178,18 @@ footer {
 }
 
 @media only screen and (max-width: 470px) {
-  #watch #glasses {
+  header .container {
+    display: flex;
+    justify-content: center;
+  }
+  header img {
+    height: 1.5rem;
+    margin-left: 0rem;
+  }
+  #watch {
+    display: none;
+  }
+  #glasses {
     display: none;
   }
   nav .full-screen {
@@ -206,4 +219,21 @@ footer {
   header img {
     height: 1.25rem;
   }
+  .feature .container {
+    display: flex;
+    align-items: flex-end;
+  }
+  .feature {
+    height: 15rem;
+    background-image: url(../images/moto.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 10rem;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
 }
